@@ -1,4 +1,4 @@
-import java.util.*;
+//import java.util.*;
 
 class Bank_Verwaltung {
     String NameKunde;
@@ -27,18 +27,37 @@ class Bank_Verwaltung {
     }
 }
 
-public class Aufgabe_25 {
+public class Aufgabe_26 {
     public static void main(String[] args) {
-        Scanner keyb = new Scanner(System.in);
-        Bank_Verwaltung Kunde = new Bank_Verwaltung();
 
-        System.out.print("Name des Kunden: \t");
-        Kunde.NameKunde = keyb.nextLine();
-        System.out.print("Alter Kontostand:\t");
-        Kunde.KontoAlt = keyb.nextFloat();
-        System.out.print("Einzahlung:\t\t");
-        Kunde.Einzahlung = keyb.nextFloat();
-        keyb.close();
+
+        Bank_Verwaltung Kunde = new Bank_Verwaltung();
+        /*
+         * Kommentierte zeilen entkommentieren für normalen scanner
+         */
+
+
+         /*
+          * Scanner keyb = new Scanner(System.in);
+          *
+          * System.out.print("Name des Kunden: \t");
+          * Kunde.NameKunde = keyb.nextLine();
+          * 
+          * System.out.print("Alter Kontostand:\t");
+          * Kunde.KontoAlt = keyb.nextFloat();
+          * 
+          * System.out.print("Einzahlung:\t\t");
+          * Kunde.Einzahlung = keyb.nextFloat();
+          * 
+          * keyb.close();
+          * 
+          */
+
+        Kunde.NameKunde = TastEin.liesString("Name des Kunden: \t");
+
+        Kunde.KontoAlt = TastEin.liesFloat("Alter Kontostand: \t");
+
+        Kunde.Einzahlung = TastEin.liesFloat("Einzahlung:\t\t");
 
         Kunde.Ausgabe();
 
